@@ -1,27 +1,83 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content {
+  background-color: #000000; /* Warna latar belakang yang lebih soft */
+  padding: 20px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.content-container {
+  flex: 1; /* Allow the container to take available space */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items */
+  align-items: center; /* Center horizontally */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.weather-card {
+  background: rgb(116, 221, 250);
+  border-radius: 15px; /* Tambahkan border-radius agar lebih smooth */
+  box-shadow: 0 4px 15px rgba(247, 109, 109, 0.753); /* Shadow yang lebih halus */
+  padding: 30px;
+  margin: 50px 0; /* Geser card ke bawah dengan menambah margin atas */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Maksimum lebar kotak */
+  flex: 1; /* Allow the weather card to expand */
+  text-align: center; /* Center align text */
 }
 
-#container a {
-  text-decoration: none;
+h2 {
+  margin-top: 20px;
+  font-size: 2em; /* Ukuran font lebih besar */
+  color: #000000; /* Warna teks */
+  font-weight: bold;
+}
+
+.weather-description {
+  font-size: 1.3em; /* Ukuran font deskripsi cuaca */
+  color: #0077ff; /* Warna teks deskripsi */
+}
+
+ion-input {
+  margin-right: 10px; /* Beri jarak antara input dan tombol */
+  width: 90%; /* Lebar input yang lebih besar */
+  font-size: 1.2em; /* Ukuran font input lebih besar */
+  padding: 10px; /* Tambahkan padding untuk input */
+}
+
+ion-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Pastikan item input mengambil ruang penuh */
+}
+
+ion-button {
+  background-color: #0288d1;
+  color: white;
+  font-size: 1em;
+}
+
+.weather-card img {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.weather-card p {
+  margin: 10px 0;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  ion-input {
+    width: 100%; /* Lebar input di layar kecil */
+  }
+
+  h2 {
+    font-size: 1.6em; /* Ukuran font lebih kecil */
+  }
+
+  .weather-card {
+    padding: 15px; /* Padding lebih kecil di layar kecil */
+  }
 }
